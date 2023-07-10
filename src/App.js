@@ -29,6 +29,7 @@ const chooseSnippet = (index) => {
   setSnippet(buttonTextItems[index]);
 setGameState({...gameState, startTime: new Date().getTime() });
 }
+  
 
   return (
     <div>
@@ -39,7 +40,7 @@ setGameState({...gameState, startTime: new Date().getTime() });
       <h4>{gameState.endTime !== null ?  `Done! Woot! Time: ${gameState.endTime}ms` : null}</h4>
       <input onChange={updateUserText} value={userText}/>
       <hr />
-      {buttonTextItems.map((textItem, index) => <button onClick={() => chooseSnippet(index)}>{textItem}</button>)}
+      {buttonTextItems.map((textItem, index) => <button style={{ background: 'lightblue'}} onClick={() => chooseSnippet(index)}>{textItem}</button>)}
     </div>
   );
 };
